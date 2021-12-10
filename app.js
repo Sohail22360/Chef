@@ -22,8 +22,10 @@ const PORT = config.port;
 
 
 if (numCPUs > 4) {
-    numCPUs = 1;
+    numCPUs =4 ;
 }
+
+
 
 if (cluster.isMaster) {
     // create a worker for each CPU
@@ -42,12 +44,7 @@ if (cluster.isMaster) {
     //create express app
     const app = express();
     const router = express.Router();
-    // view engine setup
-    // app.set('views', path.join(__dirname, 'views'));
-    // app.set('view engine', 'pug');
-    // app.use(fileUpload({
-    //     createParentPath: true
-    // }));
+  
     app.use((req, res, next) => {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

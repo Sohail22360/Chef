@@ -1,0 +1,23 @@
+{
+    "agent": {
+            "run_as_user": "root"
+    },
+    "logs": {
+            "logs_collected": {
+                    "files": {
+                            "collect_list": [
+                                    {
+                                            "file_path": "/home/ec2-user/Chef/logs/debug/debug-log.json",
+                                            "log_group_name": "/home/debug",
+                                            "log_stream_name": "i-0ba357ef2332fa01a"
+                                    },
+                                    {
+                                            "file_path": "/home/ec2-user/Chef/logs/info/info-log.json",
+                                            "log_group_name": "/home/info",
+                                            "log_stream_name": "i-0ba357ef2332fa01a"
+                                    }
+                            ]
+                    }
+            }
+    }
+}
